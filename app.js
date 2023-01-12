@@ -14,9 +14,13 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
-let phraseArray = [];
 
 // set state for all of the character's catchphrases
+let phraseArray = ['Welcome to your super perfect and realistic character customizer'];
+
+displayCatchphrases();
+
+displayStats();
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
