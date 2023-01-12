@@ -14,6 +14,7 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
+let phraseArray = [];
 
 // set state for all of the character's catchphrases
 
@@ -54,11 +55,12 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
-    
+      
     // push the new catchphrase to the catchphrase array in state
-
+    phraseArray.push(catchphraseInput.value);
+    console.log(phraseArray);
     // clear out the form input's value so it's empty to the user
-   
+    catchphrasesEl.textContent = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 
 });
